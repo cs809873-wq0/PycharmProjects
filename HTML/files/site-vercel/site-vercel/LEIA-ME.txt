@@ -1,0 +1,12 @@
+COLOCAR NO AR NA VERCEL
+1. Descompacte este ZIP. A pasta deve conter index.html e vercel.json.
+2. Em vercel.com: Add New > Project > (ou arraste a pasta em "Deploy" via Vercel CLI: npx vercel --prod dentro da pasta).
+   Sem GitHub: instale Node.js e execute, dentro da pasta:  npx vercel --prod
+   Com GitHub: envie a pasta para um repositório e importe-o na Vercel (Framework Preset: Other, sem build command, output = raiz).
+3. Domínio próprio: Project > Settings > Domains.
+
+ANTES DE PUBLICAR (obrigatório):
+- Em index.html, procure "a preencher" e substitua NIF, e-mail, matrícula, licença IMT, prazo de conservação, fornecedor de alojamento/e-mail.
+- Formulário: procure CONTACT_EMAIL e coloque o seu e-mail (abre a aplicação de e-mail do visitante). Sem isto, o formulário fica em modo de demonstração.
+- Se adicionar análise (ex. Plausible, GA), atualize o Content-Security-Policy em vercel.json e coloque o script na função loadAnalytics (só corre após consentimento).
+- Rever os textos legais com um advogado/DPO.

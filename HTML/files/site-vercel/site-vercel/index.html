@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Transportes Mercadorias E.P.A., Unipessoal Lda. — transporte rodoviário de mercadorias em Leça do Balio. Peça orçamento por telefone ou formulário.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%9B%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#edeeea">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:title" content="Transportes Mercadorias E.P.A. — Leça do Balio">
+<meta property="og:description" content="Transporte rodoviário de mercadorias no Grande Porto. Orçamento por telefone ou formulário.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Transportes Mercadorias E.P.A. — Serviço de Transporte, Leça do Balio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+<style>
+  :root{
+    --ink:#1a1e24;
+    --paper:#edeeea;
+    --paper-2:#e2e3dc;
+    --orange:#e8552b;
+    --steel:#35506b;
+    --grey:#4f5560;
+    --orange-text:#b8350c;
+    --line: rgba(26,30,36,0.14);
+    --card: #f5f5f1;
+    color-scheme: light;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  :root:not([data-theme="light"]){
+    @media (prefers-color-scheme: dark){
+      --ink:#eceae4;
+      --paper:#15171b;
+      --paper-2:#1c1f24;
+      --orange:#ff6b3d;
+      --steel:#8fb0cc;
+      --grey:#aeb4bc;
+      --orange-text:#ff7a50;
+      --line: rgba(236,234,228,0.16);
+      --card:#1c1e23;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#eceae4;
+    --paper:#15171b;
+    --paper-2:#1c1f24;
+    --orange:#ff6b3d;
+    --steel:#8fb0cc;
+    --grey:#aeb4bc;
+    --orange-text:#ff7a50;
+    --line: rgba(236,234,228,0.16);
+    --card:#1c1e23;
+  }
+  html{ scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior:smooth; }
+  *{ box-sizing:border-box; }
+  html,body{ height:100%; }
+  body{
+    margin:0;
+    background-color:var(--paper);
+    background-image: radial-gradient(var(--line) 1px, transparent 1px);
+    background-size: 26px 26px;
+    background-position: -12px -12px;
+    color:var(--ink);
+    font-family:"IBM Plex Sans", system-ui, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  section, header, footer{ background-color:var(--paper); }
+  .hazard{
+    height:6px;
+    width:100%;
+    background: repeating-linear-gradient(-45deg, var(--orange) 0 10px, var(--ink) 10px 20px);
+    opacity:0.9;
+  }
+  ::selection{ background:var(--orange); color:#fff; }
+  a{ color:inherit; }
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  .mono{ font-family:"IBM Plex Mono", monospace; }
+  .h-display{
+    font-family:"Big Shoulders Display", sans-serif;
+    font-weight:800;
+    letter-spacing:0.005em;
+    line-height:0.92;
+    text-transform:uppercase;
+  }
+
+  /* header */
+  header{
+    position:sticky;
+    top:0;
+    top: env(safe-area-inset-top, 0px);
+    z-index:50;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  .tm-nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 28px;
+    gap:20px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-family:"Big Shoulders Display", sans-serif;
+    font-weight:700;
+    font-size:20px;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    white-space:nowrap;
+  }
+  .brand-mark{
+    width:34px; height:34px;
+    flex:none;
+  }
+  .nav-links{
+    display:flex;
+    gap:28px;
+    align-items:center;
+    font-size:15px;
+  }
+  .nav-links a{
+    text-decoration:none;
+    color:var(--grey);
+    border-bottom:1px solid transparent;
+    padding-bottom:2px;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  .nav-links a:hover{ color:var(--ink); border-color:var(--orange); }
+  .nav-phone{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:14px;
+    color:var(--ink);
+    border:1px solid var(--line);
+    padding:8px 14px;
+    white-space:nowrap;
+  }
+  .nav-phone:hover{ border-color:var(--orange); color:var(--orange-text); }
+  .nav-phone svg{ width:14px; height:14px; }
+
+  /* hero */
+  .hero{
+    padding:64px 0 40px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap:56px;
+    align-items:end;
+  }
+  .eyebrow-line{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12.5px;
+    color:var(--grey);
+    margin-bottom:22px;
+  }
+  .eyebrow-line .dot{
+    width:7px; height:7px; border-radius:50%;
+    background:var(--orange);
+    flex:none;
+  }
+  .hero h1{
+    font-size:clamp(42px, 6.6vw, 84px);
+    margin:0 0 22px;
+  }
+  .hero h1 .accent{ color:var(--orange-text); }
+  .hero p.lede{
+    font-size:18px;
+    line-height:1.55;
+    color:var(--grey);
+    max-width:46ch;
+    margin:0 0 32px;
+  }
+  .cta-row{ display:flex; gap:14px; flex-wrap:wrap; }
+  .tmb{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 22px;
+    font-size:15px;
+    font-weight:500;
+    text-decoration:none;
+    border:1px solid var(--ink);
+    transition: transform .15s ease, background .15s ease, color .15s ease;
+  }
+  .tmb:active{ transform:translateY(1px); }
+  .nav-links-mobile{
+    display:none;
+    gap:18px;
+    padding:0 28px 14px;
+    font-size:14px;
+    font-family:"IBM Plex Mono", monospace;
+    overflow-x:auto;
+  }
+  .nav-links-mobile a{ color:var(--grey); text-decoration:none; white-space:nowrap; }
+  .tmb-solid{
+    background:var(--ink);
+    color:var(--paper);
+  }
+  .tmb-solid:hover{ background:var(--orange-text); border-color:var(--orange-text); color:#fff; }
+  .tmb-line{
+    background:transparent;
+    color:var(--ink);
+  }
+  .tmb-line:hover{ border-color:var(--orange); color:var(--orange-text); }
+
+  /* route svg */
+  .route-box{
+    border:1px solid var(--line);
+    background:var(--card);
+    padding:18px 18px 22px;
+  }
+  .route-box .cap{
+    display:flex;
+    justify-content:space-between;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11px;
+    color:var(--grey);
+    letter-spacing:0.04em;
+    margin-bottom:10px;
+  }
+  #routePath{
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    animation: draw 2.1s ease-out .3s forwards;
+  }
+  #routeTruck{
+    offset-path: path("M18,150 C60,60 120,40 170,90 S 300,190 340,110 S 420,20 470,55");
+    animation: moveTruck 2.1s ease-out .3s forwards;
+    opacity:0;
+  }
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+  @keyframes moveTruck{
+    0%{ offset-distance:0%; opacity:0; }
+    2%{ opacity:1; }
+    100%{ offset-distance:100%; opacity:1; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    #routePath{ animation:none; stroke-dashoffset:0; }
+    #routeTruck{ animation:none; opacity:1; offset-distance:100%; }
+  }
+  .waypoints{
+    display:flex;
+    justify-content:space-between;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11.5px;
+    margin-top:8px;
+    color:var(--grey);
+  }
+  .waypoints strong{ color:var(--ink); font-weight:500; }
+
+  section{ padding:80px 0; border-bottom:1px solid var(--line); }
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    margin-bottom:44px;
+    flex-wrap:wrap;
+  }
+  .section-head h2{
+    font-family:"Big Shoulders Display", sans-serif;
+    font-weight:800;
+    text-transform:uppercase;
+    font-size:clamp(28px, 4vw, 44px);
+    margin:0;
+    line-height:0.95;
+  }
+  .section-head .tag{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px;
+    color:var(--grey);
+    border:1px solid var(--line);
+    padding:6px 12px;
+  }
+
+  /* manifest / services */
+  .manifest{ border-top:1px solid var(--line); }
+  .manifest-row{
+    display:grid;
+    grid-template-columns: 60px 1fr 1.4fr;
+    gap:24px;
+    padding:26px 20px;
+    margin:0 -20px;
+    border-bottom:1px solid var(--line);
+    align-items:baseline;
+    transition: background .18s ease, padding-left .18s ease;
+  }
+  .manifest-row:hover{
+    background:var(--card);
+    padding-left:28px;
+  }
+  .manifest-row .num{
+    font-family:"IBM Plex Mono", monospace;
+    color:var(--orange-text);
+    font-size:14px;
+    transition: transform .18s ease;
+  }
+  .manifest-row:hover .num{ transform:translateX(2px); }
+  .manifest-row h3{
+    font-family:"Big Shoulders Display", sans-serif;
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:24px;
+    margin:0;
+    letter-spacing:0.01em;
+  }
+  .manifest-row p{
+    margin:0;
+    color:var(--grey);
+    font-size:15px;
+    line-height:1.6;
+    max-width:52ch;
+  }
+
+  /* coverage */
+  .coverage-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:56px;
+    align-items:center;
+  }
+  .coverage-list{ list-style:none; margin:0; padding:0; }
+  .coverage-list li{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+    font-size:17px;
+  }
+  .coverage-list li:first-child{ padding-top:0; }
+  .coverage-list .marker{
+    width:9px; height:9px;
+    background:var(--orange);
+    flex:none;
+  }
+  .coverage-list .zone{
+    margin-left:auto;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px;
+    color:var(--grey);
+  }
+  .map-schematic{ border:1px solid var(--line); background:var(--card); padding:14px; }
+  .map-schematic svg{ width:100%; height:auto; display:block; }
+  .map-note{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11px;
+    color:var(--grey);
+    margin-top:10px;
+    text-align:center;
+  }
+
+  /* trust */
+  .trust-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .trust-card{
+    background:var(--paper);
+    padding:30px 26px;
+    transition: background .18s ease;
+  }
+  .trust-card:hover{ background:var(--card); }
+  .trust-card:hover h3::before{ opacity:1; transform:translateX(0); }
+  .trust-card h3{ display:flex; align-items:center; gap:8px; }
+  .trust-card h3::before{
+    content:"";
+    width:6px; height:6px;
+    background:var(--orange);
+    flex:none;
+    opacity:0;
+    transform:translateX(-4px);
+    transition: opacity .18s ease, transform .18s ease;
+  }
+  .trust-card h3{
+    font-family:"Big Shoulders Display", sans-serif;
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:19px;
+    margin:0 0 12px;
+  }
+  .trust-card p{
+    margin:0;
+    color:var(--grey);
+    font-size:14.5px;
+    line-height:1.6;
+  }
+
+  /* contact */
+  .contact-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:56px;
+  }
+  .contact-card{
+    position:relative;
+    border:1px solid var(--line);
+    background:var(--card);
+    padding:36px;
+  }
+  .contact-card::before{
+    content:"";
+    position:absolute;
+    top:-1px; right:-1px;
+    width:0; height:0;
+    border-style:solid;
+    border-width:0 26px 26px 0;
+    border-color:transparent var(--paper) transparent transparent;
+    box-shadow: -1px 1px 0 0 var(--line);
+  }
+  .contact-card .label{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11.5px;
+    color:var(--grey);
+    text-transform:none;
+    margin-bottom:6px;
+  }
+  .contact-card .value{
+    font-size:20px;
+    margin:0 0 26px;
+  }
+  .contact-card .value a{ text-decoration:none; }
+  .contact-card .value a:hover{ color:var(--orange-text); }
+  .contact-card .value.small{ font-size:16px; color:var(--grey); }
+  .contact-card hr{ border:none; border-top:1px solid var(--line); margin:26px 0; }
+
+  .contact-side p{
+    color:var(--grey);
+    font-size:16px;
+    line-height:1.65;
+    max-width:44ch;
+  }
+  .rating-note{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-top:18px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px;
+    color:var(--grey);
+    border:1px solid var(--line);
+    padding:10px 14px;
+  }
+
+  footer{ padding:40px 0 calc(40px + env(safe-area-inset-bottom, 0px)); }
+  .footer-grid{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:20px;
+  }
+  .footer-legal{
+    font-size:13px;
+    color:var(--grey);
+    line-height:1.6;
+  }
+  .footer-legal strong{ color:var(--ink); font-weight:500; }
+  .footer-mark{
+    font-family:"Big Shoulders Display", sans-serif;
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:16px;
+  }
+
+  @media (max-width: 860px){
+    .hero-grid{ grid-template-columns:1fr; gap:36px; }
+    .coverage-grid{ grid-template-columns:1fr; }
+    .contact-grid{ grid-template-columns:1fr; }
+    .trust-grid{ grid-template-columns:1fr; }
+    .manifest-row{ grid-template-columns: 40px 1fr; }
+    .manifest-row p{ grid-column: 2 / 3; }
+    .nav-links{ display:none; }
+    .nav-links-mobile{ display:flex; }
+  }
+  .scroll-x{ overflow-x:auto; }
+
+  /* a11y + design pass */
+  .skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:12px 18px;z-index:200}
+  .skip:focus{left:12px}
+  :focus-visible{outline:3px solid var(--orange-text);outline-offset:3px}
+  .tmb,.nav-phone,button{min-height:44px}
+  button{font:inherit;cursor:pointer}
+  .assurance{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;padding-top:20px;border-top:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--grey)}
+  .assurance span::before{content:"";display:inline-block;width:8px;height:8px;background:var(--orange);margin-right:9px}
+  .ph{background:#ffe9a8;color:#1a1e24;padding:0 4px}
+  .quote-form{margin-top:26px;display:grid;gap:16px}
+  .field label{display:block;font-size:14px;font-weight:500;margin-bottom:6px}
+  .field .opt{font-weight:400;color:var(--grey)}
+  .field input,.field textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--card);border:1.5px solid var(--grey);padding:12px 14px;border-radius:0}
+  .field textarea{min-height:96px;resize:vertical}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .consent{display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.55;color:var(--grey)}
+  .consent input{width:22px;height:22px;flex:none;margin-top:2px;accent-color:var(--orange-text)}
+  .consent a{color:var(--ink)}
+  .form-note{font-size:13px;color:var(--grey);margin:0}
+  .status{padding:12px 14px;border:1.5px solid var(--steel);font-size:14px}
+  .status[hidden]{display:none}
+  .status.err{border-color:var(--orange-text)}
+  .foot-links{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line);font-size:14px}
+  .foot-links a,.foot-links button{color:var(--ink);background:none;border:none;padding:6px 0;text-decoration:underline;text-underline-offset:3px}
+  .foot-links a:hover,.foot-links button:hover{color:var(--orange-text)}
+  .ck{position:fixed;left:0;right:0;bottom:0;z-index:100;background:var(--card);border-top:3px solid var(--ink);padding:20px 28px calc(20px + env(safe-area-inset-bottom,0px));box-shadow:0 -8px 30px rgba(0,0,0,.12)}
+  .ck[hidden],.ckm[hidden]{display:none}
+  .ck-in{max-width:1120px;margin:0 auto;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+  .ck p{margin:0;flex:1 1 380px;font-size:14.5px;line-height:1.55}
+  .ck h2{font-family:"Big Shoulders Display",sans-serif;text-transform:uppercase;font-size:20px;margin:0 0 4px}
+  .ck-btns{display:flex;gap:10px;flex-wrap:wrap}
+  .ck-btns .tmb{padding:11px 18px;background:var(--paper);color:var(--ink);cursor:pointer}
+  .ck-btns .tmb:hover{background:var(--ink);color:var(--paper)}
+  .ckm{position:fixed;inset:0;z-index:110;background:rgba(10,12,15,.6);display:grid;place-items:center;padding:16px;overflow:auto}
+  .ckm-box{background:var(--paper);border:1px solid var(--ink);max-width:560px;width:100%;padding:28px}
+  .ckm-box h2{font-family:"Big Shoulders Display",sans-serif;text-transform:uppercase;font-size:28px;margin:0 0 14px}
+  .ck-opt{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px solid var(--line);font-size:14px;line-height:1.5}
+  .ck-opt input{width:22px;height:22px;flex:none;accent-color:var(--orange-text)}
+  .ck-opt strong{display:block;font-size:15px}
+  .ck-opt span{color:var(--grey)}
+  .doc{padding:56px 0 80px;max-width:760px}
+  .doc[hidden]{display:none}
+  .doc h1{font-family:"Big Shoulders Display",sans-serif;text-transform:uppercase;font-size:clamp(36px,6vw,56px);margin:10px 0 8px;line-height:.95}
+  .doc h2{font-size:18px;margin:30px 0 8px}
+  .doc p,.doc li{font-size:16px;line-height:1.7}
+  .doc .upd{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--grey)}
+  .doc a{color:var(--orange-text)}
+  .doc table{border-collapse:collapse;width:100%;font-size:14.5px;margin:10px 0}
+  .doc th,.doc td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+  .doc .tw{overflow-x:auto}
+  .back{display:inline-block;margin-top:34px;font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--ink)!important}
+  @media (max-width:860px){.row2{grid-template-columns:1fr}.ck-btns{width:100%}.ck-btns .tmb{flex:1 1 30%;justify-content:center}}
+  a{text-decoration:none}
+  .doc a,.foot-links a,.consent a,.ck a{text-decoration:underline}
+  .modal-content.ckm-box{border-radius:0;background:var(--paper);color:var(--ink);border:1px solid var(--ink)}
+  .modal-backdrop{--bs-backdrop-opacity:.6}
+  .field .invalid-feedback{font-size:13px}
+  .was-validated #f-ok:invalid{outline:3px solid var(--orange-text);outline-offset:2px}
+  .was-validated #f-ok:invalid ~ span{color:var(--orange-text)}
+  .form-control{border-radius:0}
+  .form-control:focus{box-shadow:none;border-color:var(--ink);background:var(--card);color:var(--ink)}
+</style>
+</head>
+<body>
+<a class="skip" href="#servicos">Saltar para o conteúdo</a>
+
+<header>
+  <div class="tm-nav">
+    <div class="brand">
+      <svg class="brand-mark" aria-hidden="true" focusable="false" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 24V9h14v15" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+        <path d="M16 15h6l6 4.2V24H16" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+        <path d="M2 24h1.6" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="9" cy="25.5" r="2.3" fill="var(--paper)" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="24.5" cy="25.5" r="2.3" fill="var(--paper)" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M6 13h6M6 17h4" stroke="var(--orange)" stroke-width="1.4"/>
+      </svg>
+      <span>Transportes&nbsp;Mercadorias</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#servicos">Serviços</a>
+      <a href="#cobertura">Cobertura</a>
+      <a href="#porque">Porquê nós</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="nav-phone" href="tel:+351220111165" aria-label="Ligar para 22 011 1165">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5c0 9 7 16 16 16l3-4-6-3-2 2c-3-1-5-3-6-6l2-2-3-6-4 3z"/></svg>
+      22 011 1165
+    </a>
+  </div>
+  <div class="nav-links-mobile">
+    <a href="#servicos">Serviços</a>
+    <a href="#cobertura">Cobertura</a>
+    <a href="#porque">Porquê nós</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</header>
+
+<main id="site">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow-line"><span class="dot"></span>Leça do Balio · Serviço de Transporte de Mercadorias</div>
+      <h1 class="h-display">A sua carga,<br>no destino <span class="accent">certo.</span></h1>
+      <p class="lede">Transportes Mercadorias E.P.A. faz o transporte rodoviário de mercadorias para empresas do Grande Porto, com contacto direto e sem intermediários.</p>
+      <div class="cta-row">
+        <a class="tmb tmb-solid" href="#contacto">Pedir orçamento</a>
+        <a class="tmb tmb-line" href="tel:+351220111165">Ligar agora — 22 011 1165</a>
+      </div>
+      <div class="assurance"><span>Contacto direto</span><span>Orçamento sem compromisso</span><span>Dados tratados segundo o RGPD</span></div>
+    </div>
+    <div class="route-box">
+      <div class="cap"><span>ROTA</span><span>LEÇA DO BALIO → GRANDE PORTO</span></div>
+      <svg viewBox="0 0 490 210" width="100%" height="auto" role="img" aria-labelledby="t-route d-route"><title id="t-route">Ilustração de uma rota de camião</title><desc id="d-route">Esquema original: um camião percorre uma rota desde Leça do Balio, passando por Matosinhos e Porto, até ao Grande Porto.</desc>
+        <path d="M18,150 C60,60 120,40 170,90 S 300,190 340,110 S 420,20 470,55" fill="none" stroke="var(--line)" stroke-width="2"/>
+        <path id="routePath" d="M18,150 C60,60 120,40 170,90 S 300,190 340,110 S 420,20 470,55" fill="none" stroke="var(--orange)" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="18" cy="150" r="5" fill="var(--ink)"/>
+        <circle cx="170" cy="90" r="4" fill="var(--steel)"/>
+        <circle cx="340" cy="110" r="4" fill="var(--steel)"/>
+        <circle cx="470" cy="55" r="5" fill="var(--orange)"/>
+        <g id="routeTruck">
+          <rect x="-9" y="-6" width="18" height="12" rx="1.5" fill="var(--ink)"/>
+          <circle cx="-4" cy="7" r="2.4" fill="var(--ink)"/>
+          <circle cx="5" cy="7" r="2.4" fill="var(--ink)"/>
+        </g>
+      </svg>
+      <div class="waypoints">
+        <span><strong>Origem</strong><br>Leça do Balio</span>
+        <span><strong>Trânsito</strong><br>Matosinhos / Porto</span>
+        <span style="text-align:right"><strong>Destino</strong><br>Grande Porto</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hazard" role="presentation"></div>
+
+<section id="servicos">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Serviços</h2>
+      <span class="tag mono">4 linhas de serviço</span>
+    </div>
+    <div class="manifest">
+      <div class="manifest-row">
+        <span class="num">01</span>
+        <h3>Mercadorias gerais</h3>
+        <p>Transporte rodoviário de mercadorias diversas, embaladas ou paletizadas, para empresas e particulares.</p>
+      </div>
+      <div class="manifest-row">
+        <span class="num">02</span>
+        <h3>Distribuição local</h3>
+        <p>Entregas na área de Leça do Balio, Matosinhos e concelhos vizinhos, com acompanhamento direto do transportador.</p>
+      </div>
+      <div class="manifest-row">
+        <span class="num">03</span>
+        <h3>Cargas fracionadas</h3>
+        <p>Transporte de volumes de pequena e média dimensão, adequados a envios pontuais e não apenas a cargas completas.</p>
+      </div>
+      <div class="manifest-row">
+        <span class="num">04</span>
+        <h3>Serviço sob marcação</h3>
+        <p>Recolhas e entregas combinadas por telefone, ajustadas à data e ao destino pretendidos pelo cliente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cobertura">
+  <div class="wrap coverage-grid">
+    <div>
+      <div class="section-head" style="margin-bottom:28px;">
+        <h2>Zona&nbsp;de<br>atuação</h2>
+      </div>
+      <ul class="coverage-list">
+        <li><span class="marker"></span>Leça do Balio <span class="zone">SEDE</span></li>
+        <li><span class="marker"></span>Matosinhos <span class="zone">01</span></li>
+        <li><span class="marker"></span>Porto <span class="zone">02</span></li>
+        <li><span class="marker"></span>Maia <span class="zone">03</span></li>
+        <li><span class="marker"></span>Grande Porto <span class="zone">04</span></li>
+      </ul>
+    </div>
+    <div>
+      <div class="map-schematic">
+        <svg viewBox="0 0 320 260" width="100%" height="auto" role="img" aria-labelledby="t-map d-map"><title id="t-map">Esquema da zona de atuação</title><desc id="d-map">Esquema indicativo, sem escala real, com Leça do Balio ligada por linhas tracejadas a Matosinhos, Porto e Maia.</desc>
+          <g stroke="var(--line)" stroke-width="1">
+            <line x1="0" y1="65" x2="320" y2="65"/>
+            <line x1="0" y1="130" x2="320" y2="130"/>
+            <line x1="0" y1="195" x2="320" y2="195"/>
+            <line x1="80" y1="0" x2="80" y2="260"/>
+            <line x1="160" y1="0" x2="160" y2="260"/>
+            <line x1="240" y1="0" x2="240" y2="260"/>
+          </g>
+          <g stroke="var(--grey)" stroke-width="1" opacity="0.5">
+            <line x1="0" y1="8" x2="0" y2="0"/>
+            <line x1="80" y1="8" x2="80" y2="0"/>
+            <line x1="160" y1="8" x2="160" y2="0"/>
+            <line x1="240" y1="8" x2="240" y2="0"/>
+            <line x1="320" y1="8" x2="320" y2="0"/>
+          </g>
+          <circle cx="80" cy="130" r="6" fill="var(--orange)"/>
+          <text x="80" y="150" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--grey)">Leça do Balio</text>
+          <circle cx="160" cy="90" r="4" fill="var(--steel)"/>
+          <text x="160" y="78" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--grey)">Matosinhos</text>
+          <circle cx="200" cy="160" r="4" fill="var(--steel)"/>
+          <text x="200" y="178" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--grey)">Porto</text>
+          <circle cx="110" cy="60" r="4" fill="var(--steel)"/>
+          <text x="110" y="48" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--grey)">Maia</text>
+          <path d="M80,130 L160,90 M80,130 L200,160 M80,130 L110,60" stroke="var(--orange)" stroke-width="1" stroke-dasharray="3 3" fill="none" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="map-note">esquema indicativo — não é um mapa à escala</div>
+    </div>
+  </div>
+</section>
+
+<section id="porque">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Porquê&nbsp;esta<br>transportadora</h2>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <h3>Contacto direto</h3>
+        <p>Fala sempre com quem organiza e faz o transporte — sem central de atendimento nem intermediários.</p>
+      </div>
+      <div class="trust-card">
+        <h3>Cargas à medida</h3>
+        <p>Frota vocacionada para volumes de pequena e média dimensão, adaptada a cada serviço solicitado.</p>
+      </div>
+      <div class="trust-card">
+        <h3>Base em Leça do Balio</h3>
+        <p>Localização central para servir Matosinhos, Porto e concelhos vizinhos com deslocações mais curtas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" style="border-bottom:none;">
+  <div class="wrap contact-grid">
+    <div class="contact-card">
+      <div class="label mono">TELEFONE</div>
+      <p class="value"><a href="tel:+351220111165">22 011 1165</a></p>
+      <div class="label mono">MORADA</div>
+      <p class="value small">R. Concórdia 92<br>Leça do Balio</p>
+      <hr>
+      <div class="label mono">CATEGORIA</div>
+      <p class="value small" style="margin-bottom:0;">Serviço de Transporte</p>
+    </div>
+    <div class="contact-side">
+      <div class="section-head" style="margin-bottom:20px;">
+        <h2>Pedir<br>orçamento</h2>
+      </div>
+      <p>O contacto mais direto é por telefone. Se preferir, deixe-nos o pedido abaixo — pedimos apenas o essencial.</p>
+      <a class="tmb tmb-solid" href="tel:+351220111165" style="margin-top:6px;">Ligar para 22 011 1165</a>
+      <form class="quote-form needs-validation" id="qf" novalidate aria-label="Pedido de orçamento">
+        <div class="row g-3">
+          <div class="col-sm-6 field"><label for="f-nome">Nome</label><input class="form-control" id="f-nome" autocomplete="name" required><div class="invalid-feedback">Indique o seu nome.</div></div>
+          <div class="col-sm-6 field"><label for="f-tel">Telefone</label><input class="form-control" id="f-tel" type="tel" autocomplete="tel" required><div class="invalid-feedback">Indique um telefone.</div></div>
+        </div>
+        <div class="field"><label for="f-email">E-mail <span class="opt">(opcional)</span></label><input class="form-control" id="f-email" type="email" autocomplete="email"><div class="invalid-feedback">E-mail inválido.</div></div>
+        <div class="field"><label for="f-rota">Origem e destino da carga</label><input class="form-control" id="f-rota" required><div class="invalid-feedback">Indique origem e destino.</div></div>
+        <div class="field"><label for="f-msg">Tipo de carga <span class="opt">(opcional)</span></label><textarea class="form-control" id="f-msg"></textarea></div>
+        <label class="consent"><input type="checkbox" id="f-ok" required><span>Li a <a href="#privacidade">Política de Privacidade</a> e autorizo o tratamento dos dados acima, apenas para responder a este pedido. Posso retirar o consentimento a qualquer momento.</span></label>
+        <p class="form-note">Não pedimos NIF, morada pessoal nem dados sensíveis.</p>
+        <button class="tmb tmb-solid" type="submit">Enviar pedido de orçamento</button>
+        <div class="status" id="qs" role="status" aria-live="polite" hidden></div>
+      </form>
+      <div class="rating-note">
+        <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="var(--orange)"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.8L5.8 21l1.6-7L2 9.2l7.1-.6L12 2z"/></svg>
+        3,0 — avaliação pública no Google Maps (1 crítica, não validada)
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<main id="legal" hidden><div class="wrap">
+<article class="doc" id="privacidade" hidden>
+<p class="upd">Última atualização: 5 de novembro de 2026</p>
+<h1>Política de Privacidade</h1>
+<p>Tratamos dados pessoais de acordo com o Regulamento Geral sobre a Proteção de Dados (RGPD, Regulamento (UE) 2016/679) e a Lei n.º 58/2019. Se o titular residir no Brasil, respeitamos também, nos mesmos termos, os direitos previstos na LGPD (Lei n.º 13.709/2018).</p>
+<h2>1. Responsável pelo tratamento</h2>
+<p>Transportes Mercadorias E.P.A., Unipessoal Lda., R. Concórdia 92, Leça do Balio. Telefone 22 011 1165. NIF <mark class="ph">[a preencher]</mark>. E-mail de privacidade <mark class="ph">[a preencher]</mark>.</p>
+<h2>2. Dados recolhidos (recolha mínima)</h2>
+<p>Apenas o que o formulário pede: nome, telefone, origem/destino da carga, e, se quiser, e-mail e tipo de carga. Não pedimos NIF, morada pessoal nem dados sensíveis. Sem consentimento, o site não recolhe dados de navegação.</p>
+<h2>3. Finalidade e fundamento</h2>
+<p>Responder ao seu pedido de orçamento — consentimento (art. 6.º, n.º 1, al. a) RGPD) e diligências pré-contratuais a seu pedido (al. b).</p>
+<h2>4. Conservação</h2>
+<p>Pedidos que não resultem em contrato: até <mark class="ph">[12 meses — confirmar]</mark> após o último contacto. Se houver contrato, os prazos legais fiscais e comerciais aplicáveis.</p>
+<h2>5. Destinatários e terceiros</h2>
+<div class="tw"><table><tr><th>Terceiro</th><th>Finalidade</th><th>Dados</th></tr>
+<tr><td>Google Fonts (Google)</td><td>Carregar tipos de letra</td><td>Endereço IP e dados técnicos do navegador, ao abrir o site. Possível transferência para os EUA (Quadro de Privacidade UE-EUA). Alternativa recomendada: alojar as fontes localmente.</td></tr>
+<tr><td>jsDelivr (Bootstrap)</td><td>Carregar o estilo e os componentes do site</td><td>Endereço IP e dados técnicos do navegador, ao abrir o site.</td></tr>
+<tr><td>Google Maps (ligação)</td><td>Abrir a localização, só se clicar</td><td>Regido pela política da Google.</td></tr>
+<tr><td>Alojamento / e-mail</td><td>Receber e guardar pedidos</td><td><mark class="ph">[a preencher]</mark></td></tr></table></div>
+<p>Não vendemos nem cedemos dados para fins de marketing.</p>
+<h2>6. Os seus direitos</h2>
+<p>Acesso, retificação, apagamento, limitação, portabilidade, oposição e retirada do consentimento a qualquer momento (sem afetar o tratamento já feito). Pode apresentar reclamação à CNPD — <a href="https://www.cnpd.pt" target="_blank" rel="noopener noreferrer">cnpd.pt</a>.</p>
+<a class="back" href="#">← Voltar ao site</a></article>
+
+<article class="doc" id="cookies" hidden>
+<p class="upd">Última atualização: 5 de novembro de 2026</p>
+<h1>Política de Cookies</h1>
+<p>Regida pela Lei n.º 41/2004 (ePrivacy) e pelo RGPD. Cookies e tecnologias semelhantes não essenciais só são ativados com o seu consentimento prévio, e pode recusá-los com a mesma facilidade com que aceita.</p>
+<div class="tw"><table><tr><th>Categoria</th><th>Estado</th><th>Detalhe</th></tr>
+<tr><td>Necessários</td><td>Sempre ativos</td><td>Guarda a sua escolha de cookies no armazenamento local do navegador (<code>tm_consent_v1</code>). Não identifica o utilizador.</td></tr>
+<tr><td>Análise</td><td>Desligados por defeito</td><td>Medição de visitas. Atualmente nenhum script de análise está configurado.</td></tr>
+<tr><td>Marketing</td><td>Desligados por defeito</td><td>Atualmente não utilizamos.</td></tr></table></div>
+<p>Pode alterar a escolha em qualquer momento em «Preferências de cookies», no rodapé. A escolha é guardada por 6 meses, depois voltamos a perguntar.</p>
+<a class="back" href="#">← Voltar ao site</a></article>
+
+<article class="doc" id="termos" hidden>
+<p class="upd">Última atualização: 5 de novembro de 2026</p>
+<h1>Aviso Legal</h1>
+<p><strong>Prestador:</strong> Transportes Mercadorias E.P.A., Unipessoal Lda. — R. Concórdia 92, Leça do Balio — Tel. 22 011 1165 — NIF <mark class="ph">[a preencher]</mark> — Conservatória/matrícula <mark class="ph">[a preencher]</mark> — Licença de transporte (IMT) n.º <mark class="ph">[a preencher]</mark> — E-mail <mark class="ph">[a preencher]</mark>.</p>
+<h2>Leis aplicáveis</h2>
+<p>Lei portuguesa e foro da comarca competente, sem prejuízo dos direitos do consumidor. Em especial: RGPD e Lei n.º 58/2019 (dados pessoais); Lei n.º 41/2004 (comunicações eletrónicas e cookies); Decreto-Lei n.º 7/2004 (comércio eletrónico); Decreto-Lei n.º 257/2007 (transporte rodoviário de mercadorias); Decreto-Lei n.º 156/2005 (Livro de Reclamações).</p>
+<h2>Informação do site</h2>
+<p>O conteúdo é informativo e não constitui proposta contratual; preços e prazos são confirmados em orçamento. A classificação mostrada vem do Google Maps e não é validada por nós.</p>
+<h2>Litígios</h2>
+<p>Pode reclamar no <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer">Livro de Reclamações eletrónico</a>.</p>
+<a class="back" href="#">← Voltar ao site</a></article>
+
+<article class="doc" id="imagens" hidden>
+<p class="upd">Última atualização: 5 de novembro de 2026</p>
+<h1>Direitos de Imagem</h1>
+<p>Este site não usa fotografias nem imagens de pessoas. Os gráficos (rota, esquema, ícones) são ilustrações originais em SVG criadas para este site.</p>
+<h2>Licenças</h2>
+<p>Tipos de letra Big Shoulders Display e IBM Plex: licença SIL Open Font License 1.1, via Google Fonts. «Google Maps» é marca da Google LLC.</p>
+<h2>Se forem acrescentadas fotografias ou vídeos</h2>
+<p>Só serão usados com licença ou autorização do autor (Código do Direito de Autor e Direitos Conexos) e, quando aparecerem pessoas ou matrículas identificáveis, com o consentimento prévio escrito de quem surge na imagem (direito à imagem, art. 79.º do Código Civil). Cada imagem terá texto alternativo e crédito.</p>
+<a class="back" href="#">← Voltar ao site</a></article>
+</div></main>
+
+<div class="ck" id="ck" role="region" aria-label="Consentimento de cookies" hidden><div class="ck-in">
+<div style="flex:1 1 380px"><h2>Cookies e privacidade</h2><p>Usamos apenas o necessário para o site funcionar. Análise e marketing só com a sua autorização. Veja a <a href="#cookies" style="color:inherit">Política de Cookies</a>.</p></div>
+<div class="ck-btns"><button class="tmb" type="button" data-ck="reject">Rejeitar tudo</button><button class="tmb" type="button" data-ck="custom">Personalizar</button><button class="tmb" type="button" data-ck="accept">Aceitar tudo</button></div></div></div>
+
+<div class="modal fade" id="ckm" tabindex="-1" aria-labelledby="ckm-t" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content ckm-box">
+<h2 id="ckm-t">Preferências de cookies</h2>
+<label class="ck-opt"><input type="checkbox" checked disabled><div><strong>Necessários</strong><span>Guardam esta escolha. Sempre ativos.</span></div></label>
+<label class="ck-opt"><input type="checkbox" id="ck-an"><div><strong>Análise</strong><span>Medir visitas de forma agregada. Nenhum script ativo de momento.</span></div></label>
+<label class="ck-opt"><input type="checkbox" id="ck-mk"><div><strong>Marketing</strong><span>Publicidade e conteúdos de terceiros. Não usamos de momento.</span></div></label>
+<div class="ck-btns" style="margin-top:18px"><button class="tmb" type="button" data-ck="save">Guardar escolha</button><button class="tmb" type="button" data-ck="close">Fechar</button></div>
+</div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
+<script>
+(function(){
+var KEY='tm_consent_v1',CFG={ANALYTICS_ID:'',CONTACT_EMAIL:''},MAXAGE=15552000000;
+var $=function(q){return document.querySelector(q)};
+function read(){try{var c=JSON.parse(localStorage.getItem(KEY));return c&&Date.now()-c.ts<MAXAGE?c:null}catch(e){return null}}
+function write(c){try{localStorage.setItem(KEY,JSON.stringify(c))}catch(e){}}
+function loadAnalytics(){if(!CFG.ANALYTICS_ID||window.__an)return;window.__an=1;/* Coloque aqui o script do seu fornecedor de análise, só executado após consentimento. */}
+function apply(c){if(c&&c.analytics)loadAnalytics()}
+function M(){return window.bootstrap?bootstrap.Modal.getOrCreateInstance($('#ckm')):null}
+function showM(){var m=M(),el=$('#ckm');if(m)m.show();else{el.classList.add('show');el.style.display='block';el.removeAttribute('aria-hidden')}}
+function hideM(){var m=M(),el=$('#ckm');if(m)m.hide();else{el.classList.remove('show');el.style.display='none'}}
+function save(a,m){var c={necessary:true,analytics:a,marketing:m,ts:Date.now()};write(c);apply(c);$('#ck').hidden=true;hideM()}
+function openM(){var c=read()||{};$('#ck-an').checked=!!c.analytics;$('#ck-mk').checked=!!c.marketing;showM()}
+document.addEventListener('click',function(e){var b=e.target.closest('[data-ck],[data-open-ck]');if(!b)return;var k=b.getAttribute('data-ck');
+if(b.hasAttribute('data-open-ck')||k==='custom')openM();
+else if(k==='accept')save(true,true);else if(k==='reject')save(false,false);
+else if(k==='save')save($('#ck-an').checked,$('#ck-mk').checked);
+else if(k==='close')hideM()});
+var c0=read();if(c0)apply(c0);else $('#ck').hidden=false;
+var V=['privacidade','cookies','termos','imagens'];
+function route(){var h=location.hash.slice(1),leg=V.indexOf(h)>-1;$('#site').hidden=leg;$('#legal').hidden=!leg;
+V.forEach(function(v){$('#'+v).hidden=v!==h});
+if(leg)window.scrollTo(0,0);else if(h){var t=document.getElementById(h);if(t)t.scrollIntoView()}}
+window.addEventListener('hashchange',route);route();
+$('#qf').addEventListener('submit',function(e){e.preventDefault();var f=e.target,st=$('#qs'),g=function(i){return $(i).value.trim()};
+f.classList.add('was-validated');st.hidden=true;
+if(!f.checkValidity()){var bad=f.querySelector(':invalid');if(bad)bad.focus();return}
+st.hidden=false;st.className='status';
+if(CFG.CONTACT_EMAIL){location.href='mailto:'+CFG.CONTACT_EMAIL+'?subject='+encodeURIComponent('Pedido de orçamento')+'&body='+encodeURIComponent('Nome: '+g('#f-nome')+'\nTelefone: '+g('#f-tel')+'\nE-mail: '+g('#f-email')+'\nRota: '+g('#f-rota')+'\nCarga: '+g('#f-msg'));st.textContent='A abrir a sua aplicação de e-mail.';return}
+st.textContent='Modo de demonstração: nenhum dado foi enviado nem guardado. Ligue para 22 011 1165.'});
+})();
+</script>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-mark">Transportes Mercadorias E.P.A.</div>
+      <div class="footer-legal" style="margin-top:6px;">
+        <strong>Transportes Mercadorias E.P.A., Unipessoal Lda.</strong><br>
+        R. Concórdia 92, Leça do Balio · 22 011 1165
+      </div>
+    </div>
+    <div class="footer-legal">Serviço de Transporte</div>
+  </div>
+  <div class="wrap">
+    <nav class="foot-links" aria-label="Informação legal">
+      <a href="#privacidade">Política de Privacidade</a>
+      <a href="#cookies">Política de Cookies</a>
+      <a href="#termos">Aviso Legal</a>
+      <a href="#imagens">Direitos de Imagem</a>
+      <button type="button" data-open-ck>Preferências de cookies</button>
+      <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer">Livro de Reclamações (abre noutro site)</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
