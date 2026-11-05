@@ -1,0 +1,14 @@
+usuario_correto = 'eu12345'
+senha_correta = '12345678'
+usuario = str(input('Digite seu USUÁRIO: '))
+print('OBS a senha precisa ter no mínimo 8 caracteres')
+senha = int(input('Digite sua SENHA: '))
+if  usuario != usuario_correto and senha != senha_correta:
+    print('USUÁRIO ou SENHA estão incorretos. Tente novamente')
+else:
+    print('\033[33mACESSO LIBERADO\033[m')
+    if senha >= '8':
+        print('\033[32mSua senha necessita de no mínimo 8 caracteres\033[m')
+    else:
+        print('Senha correta')
+print('---------- Seja Bem Vindo ao nosso sistema ----------')
